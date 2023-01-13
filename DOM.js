@@ -33,3 +33,24 @@ container.appendChild(container2);
 container2.appendChild(h1_2);
 container2.appendChild(p_2);
 
+const btn = document.querySelector('#btn');
+
+function alertFunction() {
+    alert("YAY! YOU DID IT!");
+}
+
+btn.addEventListener('click', alertFunction);
+
+btn.addEventListener('click', e => 
+    e.target.style.backgroundColor ='blue'
+);
+
+//to add event listeners to items matching a specific selector in the nodeList
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        alert(button.id);
+    });
+});
+
